@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Phishing Scams</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+    <div class="parent" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
+
+        <header>
+
+            <!-- Floating Logo, should be outside header -->
+            <a href="homepage.html" class="logo-link">
+                <img src="images/logo.png" alt="CS" class="logo" width="50">
+            </a>
+
+            <!-- hamburger button -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <button id="theme-toggle">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+
+            <!--this is my main nav bar div-->
+            <nav class="navbar" id="navbar">
+                <a href=homepage.html>Home</a>
+                <a href=phishing.html>Phishing Scams</a>
+                <a href=cyberbullying.html>Cyberbullying</a>
+                <a href=privacy&misinformation.html>Privacy & Misinformation</a>
+            </nav>
+        </header>
+
+        <!--this is where all my main content will go-->
+
+        <section class="top-section">
+            <h1>Phishing Scams</h1>
+        </section>
+
+        <section class="content">
+
+            <div class="phishing-layout">
+
+                <div class="left-content">
+                    <div class="box">
+                        <h2>What is Phishing?</h2>
+                        <br>
+                        <p>Phishing is when scammers try to trick you into giving away personal information by
+                            pretending to be someone you trust, such as a company, website, or even a friend. This can
+                            happen through emails, messages, or fake websites that are designed to look real.
+                        </p>
+                    </div>
+
+                    <div class="box">
+                        <h2>Common Signs of a Scam</h2>
+                        <br>
+                        <p>Scam messages often create urgency or pressure, such as telling you to act quickly or
+                            something bad will happen. They may include suspicious links, unusual email addresses, or
+                            requests for personal information like passwords. Recognising these warning signs helps you
+                            avoid scams before they cause harm.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="phishing-image">
+                    <img src="images/phishing.png" alt="phishing message">
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>How to Stay Safe</h2>
+                <ol>
+                    <li>Do not click suspicious links – Only open links from trusted sources to avoid harmful or fake
+                        websites.</li>
+                    <li>Check the sender’s email address – Make sure messages are actually from who they claim to be.
+                    </li>
+                    <li>Never share passwords or personal details – Keep your private information secure at all times.
+                    </li>
+                    <li>Think before you respond – Scammers often pressure you to act quickly, so take your time.</li>
+                    <li>Use strong, unique passwords – Create passwords that are difficult to guess and different for
+                        each account.</li>
+                </ol>
+            </div>
+<!--this is my html for my quiz settings-->
+            <div class="quiz-container">
+                <h2>Test Your Knowledge of Phishing</h2>
+
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+
+                <p id="progress-text"></p>
+
+                <div id="question"></div>
+                <div id="answers"></div>
+                <div id="feedback"></div>
+
+                <button id="checkBtn" onclick="checkAnswer()">
+                    Check Your Answer
+                </button>
+
+                <button id="nextBtn" onclick="nextQuestion()" style="display: none;">
+                    Next Question
+                </button>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer>
+
+        <div class="footer-container">
+
+            <!--this is the left side content-->
+            <div class="footer-left">
+                <div class="footer-section">
+                    <h3>Page Links</h3>
+
+                    <a href="homepage.html">Home</a>
+                    <a href="phishing.html">Phishing Scams</a>
+                    <a href="cyberbullying.html">Cyberbullying</a>
+                    <a href="privacy&misinformation.html">Privacy & Misinformation</a>
+                </div>
+
+                <div class="footer-info">
+                    <p>&#169; Cyber Safety For Teens | All Rights Reserved</p>
+                    <p>Website by: Hargunpreet Kaur</p>
+                    <p>Contact us: hka23239@my.hghs.school.nz</p>
+                </div>
+
+            </div>
+
+            <!--this is the right side content-->
+            <div class="footer-right">
+
+                <div class="footer-section">
+                    <h3>Terms & Policies</h3>
+
+                    <a href="https://www.termsfeed.com/live/114f52d6-f2dd-42f6-bff8-c8f98ee45bfe">Disclaimer</a>
+                    <a href="https://www.termsfeed.com/live/99498905-a821-4ee9-aacf-b7df1f2e7bf0">Privacy Policy</a>
+                    <a href="https://www.termsfeed.com/live/66790323-310d-4859-81dd-df45cfdc53c7">Terms of use</a>
+                </div>
+
+                <!--this is my social icons code in footer-->
+                <div class="social-section"></div>
+                <p>Follow Us On Social Media</p>
+
+                <div id="SocialIcons">
+
+                    <div class="icons instaIcon">
+                        <p class="iconName">Instagram</p>
+                        <div class="icon insta">
+                            <a href="" target="_blank"></a>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+
+                    <div class="icons facebookIcon">
+                        <p class="iconName">Facebook</p>
+                        <div class="icon facebook">
+                            <a href="" target="_blank"></a>
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                    </div>
+
+                    <div class="icons snapchatIcon">
+                        <p class="iconName">Snapchat</p>
+                        <div class="icon snapchat">
+                            <a href="" target="_blank"></a>
+                            <i class="fa-brands fa-snapchat"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navbar").classList.toggle("active");
+        }
+    </script>
+
+<!--this is my js for light/dark mode-->
+<script>
+const themeToggle = document.getElementById("theme-toggle");
+const icon = themeToggle.querySelector("i");
+
+// Apply saved theme when page loads
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+}
+
+// Toggle theme
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+
+        localStorage.setItem("theme", "light");
+
+    } else {
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+
+        localStorage.setItem("theme", "dark");
+
+    }
+
+});
+</script>
+
+    <!--this is my quiz javascript-->
+    <script>
+
+        const quizData = [
+
+            {
+                question: "What is phishing?",
+                answers: [
+                    "A type of online scam",
+                    "A social media app",
+                    "A computer game"
+                ],
+                correct: 0,
+                correctFeedback: "Great job! Phishing is an online scam designed to steal personal information.",
+                wrongFeedback: "Not quite. Phishing is an online scam designed to steal personal information."
+            },
+
+            {
+                question: "Which is a warning sign of a phishing scam?",
+                answers: [
+                    "A message creating urgency",
+                    "A message from your teacher",
+                    "A school newsletter"
+                ],
+                correct: 0,
+                correctFeedback: "Correct! Scammers often pressure people to act quickly before they think.",
+                wrongFeedback: "Not quite. Messages creating urgency are a common phishing tactic."
+            },
+
+            {
+                question: "What should you do before clicking a link?",
+                answers: [
+                    "Click it immediately",
+                    "Check if it is trustworthy",
+                    "Send it to friends"
+                ],
+                correct: 1,
+                correctFeedback: "Well done! Always check whether a link comes from a trusted source.",
+                wrongFeedback: "Incorrect. You should always verify a link before clicking it."
+            },
+
+            {
+                question: "Should you share your passwords online?",
+                answers: [
+                    "Yes",
+                    "Only with strangers",
+                    "No"
+                ],
+                correct: 2,
+                correctFeedback: "Excellent! Passwords should never be shared with anyone.",
+                wrongFeedback: "Incorrect. Passwords should always remain private."
+            },
+
+            {
+                question: "What should you do if you receive a suspicious message?",
+                answers: [
+                    "Reply immediately",
+                    "Send personal information",
+                    "Think carefully and verify it"
+                ],
+                correct: 2,
+                correctFeedback: "Correct! Taking time to verify a message helps keep you safe online.",
+                wrongFeedback: "Not quite. You should always verify suspicious messages before responding."
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let selectedAnswer = null;
+
+        function loadQuestion() {
+
+            document.getElementById("feedback").innerHTML = "";
+
+            const q = quizData[currentQuestion];
+
+            document.getElementById("progress-bar").style.width =
+                ((currentQuestion + 1) / quizData.length * 100) + '%'
+
+            document.getElementById("progress-text").innerHTML =
+                "Question " + (currentQuestion + 1) +
+                " of " + quizData.length;
+
+            document.getElementById("question").innerHTML =
+                "Question " + (currentQuestion + 1) + " - " + q.question;
+
+            let answerHTML = "";
+
+            q.answers.forEach((answer, index) => {
+
+                answerHTML += `
+            <button class="answer-btn"
+            onclick="selectAnswer(${index}, this)">
+                ${answer}
+            </button>
+        `;
+
+            });
+
+            document.getElementById("answers").innerHTML = answerHTML;
+
+            document.getElementById("checkBtn").style.display = "inline-block";
+            document.getElementById("nextBtn").style.display = "none";
+
+            selectedAnswer = null;
+        }
+
+        function selectAnswer(index, button) {
+            selectedAnswer = index;
+
+            document.querySelectorAll(".answer-btn")
+                .forEach(btn => btn.classList.remove("selected"));
+
+            button.classList.add("selected");
+        }
+
+        function checkAnswer() {
+
+            if (selectedAnswer === null) {
+                alert("Please select an answer first.");
+                return;
+            }
+
+            const q = quizData[currentQuestion];
+
+            if (selectedAnswer === q.correct) {
+
+                score++;
+
+                document.getElementById("feedback").innerHTML =
+                    q.correctFeedback;
+
+            }
+            else {
+
+                document.getElementById("feedback").innerHTML =
+                    q.wrongFeedback;
+
+            }
+
+            document.querySelectorAll(".answer-btn")
+                .forEach((btn, index) => {
+
+                    btn.disabled = true;
+                    btn.style.cursor = "not-allowed";
+
+                    if (index === q.correct) {
+                        btn.classList.add("correct-answer");
+                    }
+
+                    if (index === selectedAnswer &&
+                        selectedAnswer !== q.correct) {
+                        btn.classList.add("wrong-answer");
+                    }
+
+                });
+
+            document.getElementById("checkBtn").style.display = "none";
+            document.getElementById("nextBtn").style.display = "inline-block";
+        }
+
+        function nextQuestion() {
+
+            currentQuestion++;
+
+            if (currentQuestion < quizData.length) {
+                loadQuestion();
+            }
+
+            else {
+                document.querySelector(".quiz-container").innerHTML = `
+
+            <h2>Final Results</h2>
+
+            <h1 style="font-size:70px; margin:20px 0;">
+                ${score}/5
+            </h1>
+
+            <p style="font-size:24px; margin-top:20px;">
+
+                ${score === 5
+                        ? "Outstanding! You are a Cyber Safety Expert!"
+                        : score >= 4
+                            ? "Excellent work! You have a strong understanding of phishing scams."
+                            : score >= 3
+                                ? "Good job! You know the basics of staying safe online."
+                                : "Keep learning and try again to improve your score."
+                }
+
+            </p>
+            `;
+            }
+        }
+
+        loadQuestion();
+
+    </script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

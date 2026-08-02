@@ -1,0 +1,477 @@
+body {
+  margin: 0;
+  padding:0;
+  text-align: center;
+  overflow:visible;
+  background-color: #261f12;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #EAB749;
+    display:flex;
+    justify-content: center;
+    min-height: 90px;
+  }
+  
+  ul li {
+    float: center;
+  }
+  
+  ul li a {
+    display: block ;
+    color: white;
+    text-align: center;
+    font-size:x-large;
+    padding: 10px 20px;
+    text-decoration: none;
+ position: sticky;
+ z-index: 100;
+ margin-top: 20px;
+
+  }
+  
+  li a:hover {
+   background-color: #B47A21;
+  }
+
+  .dropdown:hover  {
+    display: block;
+    z-index:99;
+  }
+
+  
+.image_container img {
+  width: 100%;
+  height:100%;
+  margin: 0;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  z-index: 1;
+}
+  
+.container-flex{
+  display:flex;
+
+}
+
+.container-item{
+
+text-align: center;
+  font-size: small;
+  position: relative;
+  margin: 5%;
+  background-color: #fade5ffb ;
+border-radius: 15px;
+overflow-x: hidden;
+padding-right: 5%;
+padding-left: 5%;
+width:40%;
+box-shadow: 10px 10px 5px #ECA611;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+/* The Exit Button Style */
+.lightbox .close-btn {
+  position: absolute;
+
+
+  color: #ffffff;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  line-height: 1;
+}
+    #mother_situation
+{
+  height:400px;
+  width:40%;
+
+}
+
+
+
+.header-img 
+{
+margin-left: 50px;
+margin-top: 50px;
+}
+
+
+#about-us
+{
+ margin-left: 500px;
+
+}
+#young_victoria img{
+overflow:auto;
+width: 90%;
+height: 550px;
+border-radius: 80px;
+object-fit: contain;
+}
+
+#young_victoria 
+{
+  background: transparent;
+  box-shadow: none;
+}
+
+
+
+
+.logo-image img
+{
+ width:70px;
+  border-radius: 70px;
+  margin-right: 100px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.family-item 
+{
+  
+  text-align: center;
+    font-size: small;
+    position: relative;
+    background-color: #fade5ffb ;
+  border-radius: 15px;
+  overflow-x: hidden;
+  width:40%;
+  box-shadow: 10px 10px 5px #ECA611;
+padding-left: 5%;
+padding-right: 5%;
+margin-top: 5%;
+margin-left: 25%;
+}
+
+.family-container {
+  resize: both;
+ 
+}
+
+#GeorgeIV img {
+   height: 100px;
+  width:40%;
+  margin-top: 50px;
+  border-radius: 15px;
+}
+
+.dropdown-btn{
+  background-color: #fade5ffb ;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: large;
+  margin-bottom: 10px;
+
+}
+
+.dropdown-content{
+display: none;
+position: absolute;
+font-size: small;
+background-color: #fade5ffb ;
+left: 0;
+min-width: 160px;
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+padding: 9px;
+z-index: 1; 
+border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 50%;         
+  height: 300px;       
+  overflow: hidden;    
+  border-radius: 8px;
+place-items: center;
+margin-left: 500px;
+margin-right: 500px;
+margin-top: 100px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.slideshow-wrapper {
+  display: flex;
+  width: 500px;          
+  height: 100%;
+  animation: slideAnimation 12s infinite; 
+}
+
+  .slideshow-wrapper img 
+  {   
+    height: 100%;
+    object-fit: cover; 
+  margin-left: 10px;
+    margin-right: 10px;
+align-items: center;    
+
+  }
+  
+ 
+
+    @keyframes slideAnimation {
+     
+      0%   { transform: translateX(0%); }     
+      25%  { transform: translateX(-25%); }  
+      50%  { transform: translateX(-50%); }
+      75%  { transform: translateX(-75%); }   
+      100% { transform: translateX(0%); }   
+    }
+  
+    .vertical-list ul {
+display:flex;
+flex-direction: column;
+list-style: none;
+padding: 0;
+margin: 0;
+background-color: #fade5ffb ;
+box-shadow:none;
+    }
+
+.life-item
+{
+ 
+    font-size: small;
+    position: relative;
+    background-color: #fade5ffb ;
+  border-radius: 25px;
+  box-shadow: 10px 10px 5px #ECA611;
+  width:40%;
+padding-bottom: 5px;
+margin-bottom: 90px;
+padding:2px;
+
+}
+
+.coronation-portrait{
+  width:20%;
+  height:430px;
+
+}
+.life-container{
+  display: flex;
+ flex-wrap:wrap;
+ flex-basis: calc(50% - 8px);
+  gap:50px;
+  margin-top: 100px;
+  margin-left: 250px ;  
+  padding-right:10px;
+  padding-left:10px;
+}
+
+
+
+#day_of_coronation 
+{
+  width:50%;
+  height:350px;
+  margin-top: 50px;
+  border-radius: 10px;
+  border: 6px solid #C99409;
+}
+
+#queens-rule {
+  margin-left:100px;
+  padding:10px;
+}
+#marriage {
+  height:40%;
+padding:10px;
+}
+
+#children{
+  width:20%;
+  height:400px;
+  padding:5px;
+}
+
+
+
+#coronation{
+ 
+  height:250px;
+  width:40%;
+  margin-right:100px;
+}
+
+
+/*forth page*/
+
+
+.end-list{
+  background-color:#fade5ffb ;
+  width:50%;
+padding: 10px;
+border-radius: 10px;
+margin-top: 50px;
+}
+.end-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+  
+}
+
+.end-image{
+object-fit: contain;
+background-size: contain;
+height:auto;
+}
+
+.end-image img { 
+  width:40%; 
+  margin-top: 30px;
+}
+
+
+
+.flip-cover {
+  content: "";
+  justify-content: center;
+  clear: both;
+  display: flex;
+  flex-direction: column;  
+  margin-top: 100px;
+
+}
+
+.flip-heading {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  color:aliceblue;
+  font-weight: 800;
+  z-index:3;
+}
+
+.flip-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+z-index:3;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}  
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 500px;
+  margin-bottom: 100px;
+
+}
+.flip-card-inner {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-color: #fade5ffb ;
+  color: black;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 5px;
+}
+.flip-card-back {
+  background-color: #f9e076;
+  color: black(109, 62, 35);
+  transform: rotateY(180deg);
+  font-size: 12px;
+  border-radius: 10px;
+  padding:5px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+background-color:  #ECA611;
+  color: white;
+  text-align: center;
+z-index:99;
+
+}
+

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Privacy & Misinformation</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+    <div class="parent" data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="1500">
+
+        <header>
+
+            <!-- Floating Logo, should be outside header -->
+            <a href="homepage.html" class="logo-link">
+                <img src="images/logo.png" alt="CS" class="logo" width="50">
+            </a>
+
+            <!-- hamburger button -->
+            <div class="menu-toggle" onclick="toggleMenu()">
+                ☰
+            </div>
+
+            <button id="theme-toggle">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+
+            <!--this is my main nav bar div-->
+            <nav class="navbar" id="navbar">
+                <a href=homepage.html>Home</a>
+                <a href=phishing.html>Phishing Scams</a>
+                <a href=cyberbullying.html>Cyberbullying</a>
+                <a href=privacy&misinformation.html>Privacy & Misinformation</a>
+            </nav>
+        </header>
+
+        <!--this is where all my main content will go-->
+        <section class="top-section">
+            <h1>Privacy & Misinformation</h1>
+        </section>
+
+        <section class="content">
+            <div class="topic-block">
+
+                <div class="box">
+                    <h2>What is privacy (protecting your privacy online): </h2>
+                    <br>
+                    <p>Protecting your privacy online means being careful about what you share and who can see it.
+                        Personal information like your address, school, age, location or phone number should always be
+                        kept private to stay safe.
+                    </p>
+                    <h3>What you can do to protect it:</h3>
+                    <ol>
+                        <li>Keep social media accounts private</li>
+                        <li>Don’t share personal information (school, address, phone number)</li>
+                        <li>Only accept friend requests from people you know</li>
+                        <li>Turn off location sharing on apps</li>
+                        <li>Use strong, unique passwords</li>
+                    </ol>
+                </div>
+
+                <div class="topic-image">
+                    <img src="images/privacy.png" alt="image of examples of privacy" width="500">
+                </div>
+            </div>
+
+            <div class="topic-block">
+
+                <div class="box">
+                    <h2>What is misinformation:</h2>
+                    <br>
+                    <p>Misinformation is false or misleading information that spreads online, especially on social
+                        media. It can sometimes look real, so it’s important to think carefully before believing or
+                        sharing it. It can also spread quickly through social media and can confuse people or cause harm
+                        of believed without checking facts.</p>
+                    <h3>What you can do:</h3>
+                    <ol>
+                        <li>Compare information from multiple sources</li>
+                        <li>Check the dates to see if it is current</li>
+                        <li>Question anything that seems unusual or too good to be true</li>
+                        <li>Look at the author or source of the information</li>
+                        <li>Check information on trusted websites</li>
+                    </ol>
+                </div>
+
+                <div class="topic-image">
+                    <img src="images/misinfo.png" alt="images of fake messages" width="500">
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <footer>
+
+        <div class="footer-container">
+
+            <!--this is the left side content-->
+            <div class="footer-left">
+                <div class="footer-section">
+                    <h3>Page Links</h3>
+
+                    <a href="homepage.html">Home</a>
+                    <a href="phishing.html">Phishing Scams</a>
+                    <a href="cyberbullying.html">Cyberbullying</a>
+                    <a href="privacy&misinformation.html">Privacy & Misinformation</a>
+                </div>
+
+                <div class="footer-info">
+                    <p>&#169; Cyber Safety For Teens | All Rights Reserved</p>
+                    <p>Website by: Hargunpreet Kaur</p>
+                    <p>Contact us: hka23239@my.hghs.school.nz</p>
+                </div>
+
+            </div>
+
+            <!--this is the right side content-->
+            <div class="footer-right">
+
+                <div class="footer-section">
+                    <h3>Terms & Policies</h3>
+
+                    <a href="https://www.termsfeed.com/live/114f52d6-f2dd-42f6-bff8-c8f98ee45bfe">Disclaimer</a>
+                    <a href="https://www.termsfeed.com/live/99498905-a821-4ee9-aacf-b7df1f2e7bf0">Privacy Policy</a>
+                    <a href="https://www.termsfeed.com/live/66790323-310d-4859-81dd-df45cfdc53c7">Terms of use</a>
+                </div>
+
+                <!--this is my social icons code in footer-->
+                <div class="social-section"></div>
+                <p>Follow Us On Social Media</p>
+
+                <div id="SocialIcons">
+
+                    <div class="icons instaIcon">
+                        <p class="iconName">Instagram</p>
+                        <div class="icon insta">
+                            <a href="" target="_blank"></a>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+
+                    <div class="icons facebookIcon">
+                        <p class="iconName">Facebook</p>
+                        <div class="icon facebook">
+                            <a href="" target="_blank"></a>
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                    </div>
+
+                    <div class="icons snapchatIcon">
+                        <p class="iconName">Snapchat</p>
+                        <div class="icon snapchat">
+                            <a href="" target="_blank"></a>
+                            <i class="fa-brands fa-snapchat"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navbar").classList.toggle("active");
+        }
+    </script>
+
+<!--this is my js for light/dark mode-->
+<script>
+const themeToggle = document.getElementById("theme-toggle");
+const icon = themeToggle.querySelector("i");
+
+// Apply saved theme when page loads
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
+}
+
+// Toggle theme
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+
+        localStorage.setItem("theme", "light");
+
+    } else {
+
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+
+        localStorage.setItem("theme", "dark");
+
+    }
+
+});
+</script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+<link rel="stylesheet" href="style.CSS">
+</head>
+
+<!--homepage nav bar -->
+<body>
+    <div class="navbar">  
+        <ul>
+          <li>
+            
+            <div class= "logo-image">
+                <img src="imgs/logo.png" alt="Website Logo">     
+               </div>
+        
+          </li>
+              <li class="nav-list">
+                <li><a href="homepage.HTML"> Homepage </a></li>
+                  <li> <a href="family.HTML"> Family </a></li>
+                  <li> <a href="royallife.HTML"> Royal Life</a></li>
+                  <li> <a href="theend.HTML"> The End</a> </li>
+        
+              </ul>
+                </li>
+            </ul>
+        </div>
+        
+
+<!-- first image -->
+
+<div class="image_container">
+    <img src="imgs/page1vic.png" alt="Queen Victoria cover image">
+  </div>
