@@ -1,0 +1,2900 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "sans-serif";
+}
+
+html 
+{
+    overflow-x: hidden;
+    width: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body
+{
+    background: var(--base-color);
+    color: var(--text-color);
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  html, body
+{
+      overflow: visible;
+}
+
+:root {
+  --base-color: white;
+  --base-palette: #e5dedd;
+  --text-color:#333;
+  --secondary-text: #555;
+  --accent-color: #c3492c;
+  --secondary-accent-color: #a53e24;
+  --colour-big-heading: white;
+  --nav-text-color: white;
+  --button-color: linear-gradient(135deg,#241515, #743322);
+  --nav-scroll: rgb(117, 58, 43);
+  --briefcard-color: #9e8968;
+}
+
+.darkmode {
+  --base-color: #050202;
+  --base-palette: #4a4a4a;
+  --text-color:#ffffff;
+  --secondary-text: #b8b8b8;
+  --accent-color: #d67157;
+  --secondary-accent-color: #aa3619;
+  --colour-big-heading: white;
+  --nav-text-color: white;
+  --button-color: linear-gradient(135deg,#3b2020, #ab4b33);
+  --nav-scroll: rgba(135, 55, 44, 0.98);
+  --briefcard-color: #b69764;
+}
+
+a {
+  color: var(--accent-color);
+}
+
+.youth-voices a {
+  color: white;
+}
+
+
+/* Header image styling */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+ background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.881) 0%,
+        rgba(0, 0, 0, 0.55) 60%,
+        rgba(0, 0, 0, 0.10) 100%
+    );
+  z-index: 1;
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+}
+
+.titlecontent1{
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 4%;
+  width: 58%;
+  text-align: left;
+  overflow: visible;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-subtitle {
+  margin: 0 0 24px;
+  color: white;
+  font-family: "Rubik Dirt", sans-serif;
+  font-size: clamp(10px, 2.1vw, 15px);
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.titlecontent1 h1 {
+  margin: 0;
+  color: white;
+  font-family: "Rubik Dirt", sans-serif;
+  font-size: clamp(35px, 9vw, 75px);
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+.header-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 270px;
+    max-width: 75%;
+    margin-top: 35px;
+    padding: 24px 35px;
+    border-radius: 70px;
+    background: var(--button-color);
+      color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: clamp(10px, 2vw, 30px);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+
+.header-button:hover {
+    transform: translateY(-4px);
+    background-color: #f4eee9;
+}
+
+/* Container for all three students */
+.header-illustrations {
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+
+    width: 50%;
+    height: 75%;
+
+    /* Places the students next to each other */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: clamp(5px, 1vw, 20px);
+
+    /* Controls the space between the students */
+   z-index: 2;
+    pointer-events: none;
+}
+
+/* Styles shared by every student */
+.header-student {
+    position: static; /* Flexbox controls the position now */
+    width: auto;
+    max-width: 30%;
+    object-fit: contain;
+    /* object-position: bottom center; */
+    flex-shrink: 1;
+}
+
+/* Large student in the centre */
+.student-main {
+    height: 92%;
+}
+
+/* Two smaller students */
+.student-left,
+.student-right {
+    height: 62%;
+    margin-bottom: 4%;
+}
+
+
+
+#brief-heading {
+    scroll-margin-top: 130px;
+}
+
+@media screen and (max-width: 1100px) {
+    .header-illustrations {
+        right: 10%;
+        bottom: 12%;
+        width: 80%;
+        height: 45%;
+    }
+    .header-button {
+        width: min(320px, 80%);
+        min-width: 0;
+        padding: 20px 25px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-illustrations {
+        right: 2%;
+        bottom: 15%;
+        width: 96%;
+        height: 38%;
+        gap: 2px;
+    }
+    .student-main {
+        height: 85%;
+    }
+    .student-left,
+    .student-right {
+        height: 57%;
+    }
+}
+
+/* Larger PC screens */
+@media screen and (min-width: 1400px) {
+    .titlecontent1 h1 {
+        font-size: 100px;
+    }
+
+    .header-subtitle {
+        font-size: 25px;
+    }
+    .header-illustrations {
+    bottom: 10%;
+}
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    .titlecontent1 {
+        top: 16%;
+        left: 0;
+        width: 100%;
+        padding: 0 25px;
+
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* styling header ends here */
+
+
+
+/* Styling the Navigatio Bar */
+
+/* To hide the checkbox */
+#nav-menu-toggle {
+  display: none;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    transition: color 0.8s ease-in-out;
+    overflow:  visible;
+    
+}
+
+nav {
+  background: rgba(158, 130, 93, 0.162);
+  backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+  padding: 10px 17px;
+  border-radius: 50px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+nav #mynav {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+  nav #mynav li {
+    padding: 0;
+  }
+
+    nav #mynav li a {
+    display: block;
+    position: relative;
+
+
+    padding: 12px 22px;
+    border-radius: 999px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    transition: 0.35s ease;
+    overflow: hidden;
+  }
+
+   nav #mynav li  a:hover {
+    color: white;
+    transform: translateY(-5px);
+    font-size: 21px;
+  }
+
+  nav a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border-radius: 999px;
+    background: linear-gradient(
+      135deg,
+  #241515,
+  #743322
+    );
+
+    opacity: 0;
+    z-index: -1;
+    transition: 0.35s ease;
+  }
+
+  nav a:hover::before {
+    opacity: 1;
+  }
+
+nav #mynav li a {
+    font-size: 18px;
+    color: var(--nav-text-color);
+    text-decoration: none;
+    position: relative;
+
+} 
+
+/* Styling Nav bar drop down for smaller screen size */
+/* Controls on right hand side */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Hamburger hidden on desktop */
+.menu-label {
+    display: none;
+}
+
+/* theme toggle(light and dark) button styles   */
+#theme-toggle {
+  background-color: transparent;
+  border: none;
+  padding: 20px 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  position: sticky;
+  background-color: rgba(171, 164, 164, 0.206);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15);
+        border-radius: 50px;
+        transition: transform 0.35s ease, background 0.35s ease;
+}
+
+#theme-toggle i:last-child {
+    display: none;
+}
+
+.darkmode #theme-toggle i:first-child{
+    display: none;
+}
+
+.darkmode #theme-toggle i:last-child{
+    display: block;
+}
+
+#theme-toggle:hover {
+    background: linear-gradient(
+        135deg,
+        #241515,
+        #743322
+    );
+    color: white;
+    transform: scale(1.1);
+}
+
+/* theme Icon style */
+.theme-icon {
+    font-size: 30px;
+}
+
+/* Nav bar responsiveness on tablet, ipads, and mobile */
+
+@media screen and (max-width: 1100px) {
+  /* The white nav bar on top */
+  .navdiv,
+  .navdiv.scrolled {
+    padding: 10px 25px;
+     background-color: rgba(70, 72, 66, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+/* logo colour */
+  .logo h1 {
+    color: white;
+    font-size: 29px;
+  }
+  
+  /* the drop down placement */
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  /* Dropdown when closed */
+  nav #mynav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    max-height: 0;
+    padding: 0;
+    background-color: rgba(58, 60, 55, 0.52);
+    border-radius: 0 0 48px 48px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  nav #mynav li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+  nav #mynav li a {
+    display: block;
+    width: 100%;
+    padding:  19px 25px;
+    color: white;
+    background-color: transparent;
+    border-radius: 0;
+    font-size: 19px;
+    text-align: left;
+    box-sizing: border-box;
+    transform: none;
+  }
+
+  nav #mynav li a:hover {
+  padding-left: 35px;
+  color: #f1c7b6;
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: none;
+  }
+
+/* hamgurger icon to show */
+.menu-label {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-label::before {
+  content: "menu";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "Material Icons";
+  font-size: 34px;
+  transform: translate(-50%,-50%);
+}
+
+/* Smaller theme button on smaller screen */
+#theme-toggle {
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+
+#theme-toggle:hover {
+    background: linear-gradient(135deg, #241515, #743322);
+    color: white;
+    transform: scale(1.1);
+}
+    
+.theme-icon {
+  font-size: 23px;
+}
+/* To open the dropdown */
+#nav-menu-toggle:checked ~ nav #mynav {
+  max-height: 350px;
+}
+
+/* hamburger icon to close icon */
+#nav-menu-toggle:checked ~ .nav-controls .menu-label::before {
+  content: "close";
+}
+
+/* Dark-mode for top bar */
+.darkmode .navdiv, .darkmode .navdiv.navdiv.scrolled {
+  background-color: var(--nav-scroll);
+}
+
+.darkmode .logo h1, .darkmode .menu-label {
+  color: white;
+}
+}
+
+/* Styling nav logo */
+.logo h1 {
+    font-family: 'Rubik Dirt',sans-serif;
+    font-size: 32px;
+    color: white;
+    transition: 0.5s;
+    font-weight: normal;
+}
+
+.logo a{
+    text-decoration: none;
+}
+
+.logo  h1:hover{
+    color: #C3492C;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+/* Background of nav bar after scrolling past */
+.navdiv.scrolled {
+    background-color: var(--nav-scroll);
+    opacity: 0.98;
+}
+
+
+/* Styling homepage */
+/* Styling for What is happening section */
+.brief {
+  padding: clamp(40px, 7vw, 100px) 5%;
+  background-color: var(--base-color);
+}
+
+.brief-card {
+   --button-colour: #803b20;
+   width: min(1200px, 100%);
+   margin: 0 auto;
+   padding: 0 28px 28px;
+   display: grid;
+   grid-template-columns: minmax(280px, 0.85fr) minmax(320px, 1.4fr);
+   grid-template-rows: auto 1fr auto;
+   grid-template-areas:
+    "image title"
+    "image content"
+    "button credit";
+    column-gap: clamp(30px, 4vw, 70px);
+  row-gap: 26px;
+  background-color: var(--briefcard-color);
+  border-radius: 60px 0 60px 0;
+  overflow: hidden;
+}
+
+.brief-title {
+  grid-area: title;
+  margin-right: -28px;
+  padding: 24px 40px 27px;
+  background-color: var(--base-color);
+  border-radius: 0 0 0 55px;
+}
+
+.brief-title h2{
+  margin: 0;
+  color: var(--text-color);
+  font-family: "Rubik Dirt", sans-serif;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.brief-image{
+   grid-area: image;
+  min-height: 470px;
+  margin: 48px 0 0;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 80px;
+}
+
+.brief-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 
+  transform 0.5s ease;
+}
+
+.brief-image:hover img {
+  transform: scale(1.04);
+}
+
+.brief-content {
+  grid-area: content;
+  align-self: center;
+  max-width: 700px;
+  padding-right: 30px;
+
+  color: #fff;
+}
+
+.brief-content p {
+  margin: 0 0 18px;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.enter-button {
+  grid-area: button;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-width: 230px;
+  padding: 19px 28px;
+  color: white;
+  background-color: var(--button-colour);
+  border: 3px solid transparent;
+
+  border-radius: 999px;
+
+  font-family: "Rubik Dirt", sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.enter-button span {
+  transition: transform 0.25s ease;
+}
+
+.enter-button:hover {
+  background-color: #a34d29;
+  transform: translateY(-4px);
+}
+
+.enter-button:hover span {
+  transform: translateX(5px);
+}
+
+.brief-credit {
+    grid-area: credit;
+}
+
+/* Responsiveness of brief section */
+@media screen and (max-width: 1100px) {
+  .brief {
+    padding: clamp(30px, 6vw, 60px) 4%;
+  }
+
+/* To change the brief-card 2 coloumns to 1 */
+.brief-card {
+  width: 100%;
+  padding: 0 24px 28px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "title" "image" "content" "button" "credit";
+  gap: 24px;
+  border-radius: 45px 0 45 px 0;
+}
+
+/* brief heading */
+.brief-title {
+  margin: 0 -24px;
+  padding: 25px 30px;
+  border-radius: 0 0 40px 40px;
+  text-align: center;
+}
+
+.brief-title h2 {
+font-size: clamp(2rem, 7vw, 4rem);
+}
+
+/* to make the image responsive */
+.brief-image {
+  width: 100%;
+  height: clamp(280px, 60vw, 520px);
+  min-height: 0;
+  margin: 0;
+  border-radius: 50px;
+}
+
+.brief-content {
+max-width: none;
+padding: 0;
+}
+
+.brief-content p {
+font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+  .enter-button {
+        justify-self: start;
+    }
+
+    .brief-credit {
+        color: var(--text-color);
+    }
+}
+
+/* Repsonsiveness of brief section for narrower phones */
+@media screen and (max-width: 600px) {
+
+    .brief {
+        padding: 30px 14px;
+    }
+
+    .brief-card {
+        padding: 0 18px 22px;
+        gap: 20px;
+        border-radius: 32px 0 32px 0;
+    }
+
+    .brief-title {
+        margin: 0 -18px;
+        padding: 22px 18px;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .brief-image {
+        height: 300px;
+        border-radius: 35px;
+    }
+
+    /* Full-width button on phone*/
+    .enter-button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .brief-credit {
+        font-size: 0.85rem;
+    }
+}
+
+/* Infinite marquee fourth atempt */
+
+.wrapper {
+width: 90%;
+max-width: 1536px;
+margin-inline: auto;
+position: relative;
+height: 590px;
+margin-top: 5rem;
+margin: 5rem auto;
+overflow: hidden;
+mask-image: linear-gradient(to right,
+  rgba(0,0,0,0),
+  rgba(0,0,0,1) 20%,
+  rgba(0,0,0,1) 80%,
+  rgba(0,0,0,0)
+);
+}
+/* Styling marquee cards */
+.item {
+  position: absolute;
+  width: 400px;
+  height: 530px;
+  background: #fffdf9;
+  padding: 0 0 22px;
+  border-radius: 22px;
+  text-decoration: none;
+  border: 1px solid #d8cfc1;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+  left: max(calc(400px * 4), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: -7.5s;
+}
+/* marquee animation */
+@keyframes scrollLeft {
+  to {
+    left: -400px;
+  }
+}
+
+.wrapper:hover .item {
+  animation-play-state: paused;
+}
+
+/* Styling the marquee texts */
+/* Small uppercase source label shown above the main statistic. */
+.marquee-label {
+  margin: 19px 22px 8px;
+  color: #8a4a32;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+/* The large statistic */
+.marquee-number {
+  margin: 0 22px;
+  color: #713722;
+  font-family: "Rubik Dirt", sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+/* The marquee card title inside the marquee */
+.item .card-title {
+  margin: 7px 22px 10px;
+  color: #292622;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.22rem;
+  line-height: 1.25;
+}
+
+/* The card marquee description */
+.item .badge {
+  min-height: 78px;
+  margin: 0 22px;
+  padding: 0;
+  color: #625d56;
+  background: transparent;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* The call to action link */
+.marquee-cta {
+  display: block;
+  margin: 14px 22px 0;
+  color: #713722;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+/* The source link  */
+.marquee-source {
+  display: block;
+  margin: 7px 22px 0;
+  columns: #625d56;
+  font-size: 0.78rem;
+  text-decoration: underline;
+}
+
+
+@keyframes loop {
+  from {transform:translateX(0);}
+  to {transform:translateX(-100%);}
+}
+
+.wrapper-card-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 21px 21px 0 0;
+}
+
+.item1 {
+  animation-delay: calc(15s / 4 * (4 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(15s / 4 * (4 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(15s / 4 * (4 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(15s / 4 * (4 - 4) * -1);
+}
+
+
+
+/* Restyling topic section as carousle slide */
+.topics-section {
+  align-items: center;
+  overflow: hidden;
+}
+.topic-section-title {
+  display: flex; /* Enables flexbox for alignment */
+  align-items: center; /* Vertically centers items */
+  text-align: center; /* Centers the title text */
+  margin: 20px 0; /* Adds some spacing around the container */
+}
+.topic-section-title h1 {
+  font-size: 36px;
+  font-family: 'Rubik Dirt';
+  margin-bottom: 100px;
+  font-weight: normal;
+  margin: 0; 
+  padding: 0 10px; 
+  white-space: nowrap;
+}
+
+.line {
+  flex-grow: 1; 
+  height: 2px; 
+  background-color: var(--text-color); 
+  margin: 0 50px; 
+}
+
+.title-container h2 {
+  margin: 0;
+  padding: 0 10px; 
+  white-space: nowrap; 
+}
+
+.card-wrapper {
+  max-width: 90%;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden;
+}
+
+.card-list .card-item {
+  list-style: none;
+}
+
+.card-list .card-item .card-link {
+  user-select: none;
+  display: block;
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:active {
+  cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover {
+  border-color: #a53e24;
+}
+
+.card-list .card-link .card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+  color: #c3492c;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  background: whitesmoke;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.card-list .card-link .card-title {
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+}
+
+.card-list .card-link .card-button {
+  height: 35px;
+  width: 35px;
+  color: #a53e24;
+  border-radius: 50%;
+  margin: 30px 0 5px;
+  background: none;
+  cursor: pointer;
+  border: 2px solid #c3492c;
+  transform: rotate(-45deg);
+  transition: 0.4s ease;
+}
+
+.card-list .card-link .card-button {
+  color: white;
+  background: #C3492C;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+  background: var(--accent-color);
+}
+.card-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+  color: var(--text-color);
+  margin-top: -35px;
+}
+
+/* To hide the swiper slide button on small screen */
+@media screen and (max-width: 768px) {
+  .card-wrapper {
+      margin: 0 10px 25px;
+  }
+
+  .card-wrapper .swiper-slide-button {
+      display: none;
+  }
+}
+
+/* Styling Footer */
+footer {
+  display: flex;
+  width: 100%;
+  position: relative;
+  background: url('optimized-transparent-illustrations/footerdesign.png') no-repeat bottom center;
+  background-size: cover;
+  color: #f0f0f0;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.footer-overlay {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.685);
+  padding-top: 15%;
+  mask-image: linear-gradient(black,transparent);
+  -webkit-mask-image: linear-gradient(0deg, black 68%,transparent 100%);
+}
+
+.row {
+
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 20px;
+
+}
+
+.logo h1 {
+  font-family: "Rubik Dirt", sans-serif;
+  font-weight: normal;
+}
+.col h2{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+  font-family: "Rubik Dirt", sans-serif;
+  font-weight: normal;
+}
+
+.email-id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.col ul li {
+  list-style: none;
+  margin-bottom: 12px;
+  color: white;
+  transition: 0.5s;
+}
+
+.subcol  :hover{
+  color: #C3492C;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.col ul li a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+#SocialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+margin-top: 40px;
+}
+
+/* Each icon container */
+.icons {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+}
+
+.icons:hover {
+  border-color: transparent;
+}
+
+/* Tooltip */
+.iconName {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  font-size: 12px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 4px 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.icons:hover .iconName {
+  transform: translateX(-50%) scale(1);
+}
+
+/* Tooltip colors */
+.icons.instaIcon:hover .iconName {
+  background: linear-gradient(135deg,#241515,#743322);
+}
+
+.icons.xIcon:hover .iconName {
+  background: linear-gradient(135deg,#241515,#743322);
+}
+
+.icons.youtubeIcon:hover .iconName {
+  background: linear-gradient(135deg,#241515,#743322);
+}
+
+/* Inner icon styling */
+.icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon i {
+  z-index: 2;
+  color: #ffffff;
+  font-size: 26px;
+  transition: color 0.3s ease;
+}
+
+.icon:hover i {
+  color: #fff;
+}
+
+/* Animated background fill */
+.icon::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  transition: height 0.3s ease;
+  z-index: 1;
+}
+
+.icon:hover::before {
+  height: 100%;
+}
+
+/* Background fill colors */
+.icon.insta::before {
+  background: linear-gradient(135deg,#241515,#743322);
+}
+
+.icon.x::before {
+  background: linear-gradient(135deg,#241515,#743322);
+}
+
+.icon.youtube::before {
+  background: linear-gradient(135deg,#241515,#743322);
+}
+
+#SocialIcons a {
+   text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+   position: absolute;
+  color: inherit;
+  z-index: 10;  
+}
+
+hr {
+  width: 90%;
+  border:0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.copyright {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.copyright p {
+  color: white;
+}
+
+/* Styling Footer end here */
+
+
+/* Styling for Impact page*/
+.impact-quote-section {
+  align-items: center;
+  overflow: hidden;
+}
+.impact-quote-title {
+  display: flex;
+  align-items: center; 
+  text-align: center; 
+  margin: 20px 0; 
+}
+.impact-quote-title h1 {
+  font-size: 36px;
+  font-family: 'Rubik Dirt';
+  margin-bottom: 100px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 10px; 
+  /* white-space: nowrap;  */
+}
+
+
+.impact-quote-line {
+  flex-grow: 1;
+  height: 2px; 
+  background-color: var(--text-color); 
+  margin: 0 50px; 
+}
+
+.header-illustrations-impact {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 65%;
+  height: 75%;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.impact-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.impact-wrapper .impact-item {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  align-items: center;
+  
+}
+
+.impact-wrapper .impact-item::before{
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(40%) blur(7px);
+  background-image: url("imagesfolder/website_illu4blackbg.jpg");
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.impact-wrapper .impact-item:nth-child(2):before {
+  background-image: url("imagesfolder/website_illubooknhand.jpg");
+}
+
+.impact-wrapper .impact-item:nth-child(3):before {
+  background-image: url("#");
+}
+
+
+.impact-wrapper .impact-item:nth-child(5):before {
+  background-image: url("imagesfolder/website_illugradcap.jpg");
+}
+
+.impact-wrapper .impact-item .impact-content {
+  opacity: 0;
+  color: #fff;
+  z-index: 20;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px 10px;
+  max-width: 1400px;
+  position: relative;
+}
+
+.impact-item.swiper-slide-active .impact-content {
+  animation: animate_opacity 0.8s 0.6s linear forwards;
+}
+
+@keyframes animate_opacity {
+ 100% {
+  opacity: 1;
+ }
+}
+
+.impact-wrapper .impact-item .impact-content > * {
+  max-width: 35%;
+}
+
+.impact-item .impact-content .impact-subtitle {
+  font-size: 1rem;
+  font-weight: normal;
+  opacity: 0;
+  transform: translateY(60%);
+}
+
+.impact-item .impact-content .impact-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 5px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(60%);
+}
+
+.impact-item.swiper-slide-active :where(.impact-subtitle, .impact-title) {
+  animation: animate_text 0.6s 0.6s linear forwards;
+}
+
+@keyframes animate_text {
+ 100% {
+  opacity: 1;
+  transform: translateY(0%);
+ }
+}
+
+.impact-item .impact-content .impact-description {
+  margin-top: 25px;
+  line-height: 25px;
+  opacity: 0;
+  transform: translateY(60%);
+}
+
+.impact-item.swiper-slide-active .impact-description {
+  animation: animate_text 0.6s 1s linear forwards;
+}
+
+.impact-item .impact-content .impact-button {
+  color: #fff;
+  opacity: 0;
+  width: 0;
+  padding: 13px 0;
+  display: block;
+  margin-top: 45px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #fff;
+  transition: 0.5s ease;
+}
+
+.impact-item .impact-content .impact-button span {
+  opacity: 0;
+}
+
+.impact-item.swiper-slide-active .impact-button span {
+  animation: animate_opacity 0.6s 1.5s linear forwards;
+}
+
+.impact-item.swiper-slide-active .impact-button {
+  animation: animate_button 0.6s 1.3s linear forwards;
+}
+
+@keyframes animate_button {
+ 100% {
+  opacity: 1;
+  width: 250px;
+ }
+}
+
+.impact-item .impact-content .impact-button:hover {
+  color: #000;
+  background: #fff;
+}
+
+.impact-container .impact-controls {
+  position: absolute;
+  bottom: 45px;
+  z-index: 20;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  
+}
+
+.impact-pagination .impact-indicator{
+position: absolute;
+bottom: -1px;
+border-bottom: 2px solid #fff;
+transition: 0.4s ease-in-out;
+}
+
+.impact-controls .impact-pagination {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1400px;
+  list-style: none;
+}
+
+.impact-pagination .impact-tab {
+  flex: 1; 
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+    padding: 20px 10px;
+  border-bottom: none;
+}
+
+.impact-navigations button {
+  position: absolute;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 20;
+  color: white;
+  background: #202022;
+  transform: translateY(-50%);
+  transition: 0.4s ease;
+}
+
+.impact-navigations button.swiper-button-disabled {
+  display: none;
+}
+
+.impact-navigations button:hover {
+  background: #323235;
+}
+
+.impact-navigations button#impact-prev {
+  left: 20px;
+}
+
+.impact-navigations button#impact-next {
+  right: 20px;
+}
+
+.impact-controls .impact-pagination::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1536px) {
+  .impact-wrapper .impact-item .impact-content,
+  .impact-controls .impact-pagination {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1024px) {
+    .impact-wrapper .impact-item .impact-content,
+  .impact-controls .impact-pagination {
+    width: 100%;
+  }
+
+  .impact-wrapper .impact-item .impact-content > * {
+    max-width: 66%;
+  }
+
+  .impact-navigations button {
+    top: unset;
+    bottom: -15px;
+    background: none;
+  }
+
+    .impact-navigations button:hover {
+      background: none;
+    }
+}
+
+@media (max-width: 768px) {
+  .impact-wrapper .impact-item .impact-content > * {
+  max-width: 100%;
+  }
+}
+
+/* To improve readibility */
+/* Dark panel behind the text */
+.impact-text-panel {
+    width: min(520px, 100%);
+    padding: 32px;
+    color: white;
+    background-color: rgba(20, 16, 14, 0.86);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Stop the old 35% width from affecting the new panel */
+.impact-wrapper .impact-item .impact-content > * {
+    max-width: none;
+}
+
+/* to  Keep the text inside the panel */
+.impact-text-panel > * {
+    max-width: 100%;
+}
+
+/* Improved the title for impact section */
+.impact-text-panel .impact-title {
+    font-size: clamp(30px, 3vw, 48px);
+    line-height: 1.1;
+    margin: 8px 0 20px;
+}
+
+.impact-text-panel .impact-description {
+    font-size: 17px;
+    line-height: 1.65;
+    margin-top: 0;
+}
+
+.impact-text-panel .impact-button {
+    display: inline-block;
+    width: auto;
+    margin-top: 25px;
+    padding: 14px 25px;
+}
+
+/* Phone layout */
+@media screen and (max-width: 600px) {
+    .impact-wrapper .impact-item .impact-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .impact-text-panel {
+        width: 100%;
+        padding: 22px 18px;
+        border-radius: 15px;
+    }
+
+    .impact-text-panel .impact-title {
+        font-size: 30px;
+    }
+
+    .impact-text-panel .impact-description {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .impact-text-panel .impact-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Positions the whole navigation near the bottom */
+.impact-container .impact-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  width: min(92%, 1400px);
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  z-index: 20;
+}
+
+/* Dark transparent background behind all five tabs */
+/* .impact-controls .impact-pagination {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 8px 20px;
+  gap: 6px;
+  list-style: none;
+  background-color: rgba(32, 27, 24, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+} */
+
+/* Each navigation label */
+.impact-pagination .impact-tab {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  min-width: 130px;
+  padding: 14px 8px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* Moving orange shape underneath the selected tab */
+.impact-pagination .impact-indicator {
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  bottom: auto;
+  height: calc(100% - 16px);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  transition: 0.4s ease-in-out;
+  z-index: 1;
+}
+
+/* Remove the old continuous line */
+.impact-controls .impact-pagination::before {
+    display: none;
+}
+
+#impact-heading {
+  scroll-margin-top: 130px;
+}
+
+
+
+
+/* Impact slider navigation bar */
+.impact-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  width: min(86%, 900px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  /* padding: 10px; */
+  border-radius: 40px;
+  z-index: 10;
+/* -------- */
+  margin: 0;
+  padding: 8px 20px;
+  gap: 6px;
+  list-style: none;
+  background-color: rgba(32, 27, 24, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* Hides the little horizontal scrollbar */
+.impact-controls::-webkit-scrollbar {
+    display: none;
+}
+
+/* Each impact button */
+.impact-tab {
+    flex: 0 0 150px;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 18px;
+
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+/* Brown active tab shape */
+.impact-indicator {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: calc(100% - 20px);
+
+    border-radius: 30px;
+    background: #8a4a2d;
+    transition: 0.3s ease;
+    z-index: 1;
+}
+
+/* Keep arrow buttons above the slider */
+#impact-prev,
+#impact-next {
+    z-index: 11;
+}
+
+/* Phone size */
+@media (max-width: 700px) {
+    .impact-controls {
+        width: 76%;
+        bottom: 16px;
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .impact-tab {
+        flex: 0 0 120px;
+        font-size: 13px;
+        padding: 12px 10px;
+    }
+}
+
+
+.impact-gallery {
+  padding: 70px 0;
+  overflow: hidden;
+  background-color: var(--base-color);
+}
+
+/* Moving row */
+.impact-marquee {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+    );
+}
+
+/* Individual moving image */
+.impact-marquee-image {
+  position: absolute;
+  left: max(calc(280px * 5), 100%);
+  width: 280px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 4px solid transparent;
+  animation-name: impactMarqueeMovement;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.impact-marquee-image:hover {
+  border-color: #a53e24;
+}
+
+/* Image fills its box */
+.impact-marquee-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Impact marquee animation */
+@keyframes impactMarqueeMovement {
+    to {
+        left: -280px;
+    }
+}
+
+/* Spread the five images across the animation */
+.impact-marquee .impact-image1 {
+    animation-delay: calc(20s / 5 * (5 - 1) * -1);
+}
+
+.impact-marquee .impact-image2 {
+    animation-delay: calc(20s / 5 * (5 - 2) * -1);
+}
+
+.impact-marquee .impact-image3 {
+    animation-delay: calc(20s / 5 * (5 - 3) * -1);
+}
+
+.impact-marquee .impact-image4 {
+    animation-delay: calc(20s / 5 * (5 - 4) * -1);
+}
+
+.impact-marquee .impact-image5 {
+    animation-delay: calc(20s / 5 * (5 - 5) * -1);
+}
+
+/* Bottom row travels in the opposite direction */
+.impact-marquee-reverse .impact-marquee-image {
+    animation-direction: reverse;
+}
+
+/* Pause on hover */
+.impact-marquee:hover .impact-marquee-image {
+    animation-play-state: paused;
+}
+
+/* Text between the two rows */
+.impact-gallery-message {
+  max-width: 700px;
+  margin: 55px auto;
+  padding: 0 25px;
+  text-align: center;
+}
+
+.impact-gallery-message h2 {
+  margin-bottom: 12px;
+  color: var(--text-color);
+  font-family: "Rubik Dirt", sans-serif;
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: normal;
+}
+
+.impact-gallery-message p {
+  color: var(--text-color);
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .impact-gallery {
+        padding: 45px 0;
+    }
+
+    .impact-marquee {
+        height: 145px;
+    }
+
+    .impact-marquee-image {
+        left: max(calc(210px * 5), 100%);
+        width: 210px;
+        height: 125px;
+    }
+
+    @keyframes impactMarqueeMovement {
+        to {
+            left: -210px;
+        }
+    }
+
+    .impact-gallery-message {
+        margin: 35px auto;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .impact-marquee-image {
+        animation-play-state: paused;
+    }
+}
+
+.youth-voices {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+/* Main section heading */
+.youth-voices h2 {
+  font-family: "Rubik Dirt", sans-serif;
+  font-size: clamp(35px, 5vw, 65px);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  font-weight: normal;
+}
+
+/* Each image and text row */
+.youth-story {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 90px;
+}
+
+/* Puts the image on the right */  
+.youth-story-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Illustration or photograph */
+.youth-story img {
+  width: 30%;
+  height: 30%;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+.youth-story img:hover {
+  transform: rotate(360deg);
+}
+
+/* Text beside the image */
+.youth-story-text {
+    width: 42%;
+}
+
+/* Small rounded heading */
+.youth-story-text h3 {
+  width: fit-content;
+  color: white;
+  background-color: var(--briefcard-color);
+  border-radius: 50px;
+  padding: 12px 35px;
+  margin: 0 auto 30px;
+  font-family: "Rubik Dirt", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition:  0.3s ease;
+}
+
+.youth-story-text h3:hover {
+  transform: translateY(-4px);
+}
+
+/* Story description */
+.youth-story-text p {
+  color: var(--text-color);
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: center;
+  margin: 0;
+}
+
+/* Decorative brown shapes */
+.youth-story::after {
+  content: "";
+  width: 70px;
+  height: 35px;
+  flex-shrink: 0;
+  background-color: var(--briefcard-color);
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .youth-voices {
+        margin: 50px auto;
+        padding: 20px;
+    }
+  
+    .youth-voices h2 {
+        margin-bottom: 45px;
+    }
+
+    /* Stacking the image above the text */
+    .youth-story,
+    .youth-story-reverse {
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 70px;
+    }
+
+    .youth-story img {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+    }
+
+    .youth-story-text {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .youth-story-text p {
+        font-size: 16px;
+    }
+
+    /* Hiding the decorative shape on small screens */
+    .youth-story::after {
+        display: none;
+    }
+  }
+
+
+
+/* Timeline */
+.timeline {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 700px;
+  position: relative;
+}
+.timeline__content-title {
+  font-weight: normal;
+  font-size: 60px;
+  margin: -10px 0 0 0;
+  transition: 0.4s;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: "Rubik Dirt", sans-serif;
+  color: #fff;
+}
+.timeline__content-desc {
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  font-family: Cardo;
+  font-weight: normal;
+  line-height: 25px;
+}
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background: rgba(255, 255, 255, 0.07);
+}
+@media only screen and (max-width: 767px) {
+.timeline-container {
+    overflow-x: hidden;
+  }
+
+  .timeline {
+    width: 100%;
+  }
+
+  .timeline:before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    align-self: baseline !important;
+    /* I use !important to give the property highest priority,
+     overriding all property. */
+    width: 100%;
+    min-width: 0;
+    padding: 0 16px 110px 60px;
+  }
+
+  .timeline__content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .timeline__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .timeline__content-title {
+    font-size: clamp(36px, 12vw, 46px);
+    padding: 0;
+    overflow-wrap: anywhere;
+  }
+
+.timeline-item:before {
+  left: 2px !important;
+  right: auto;
+  top: 50px;
+  width: 52px;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 9px;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-align: center !important;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+  .timeline-item:last-child {
+    padding-bottom: 40px;
+  }
+  
+}
+.timeline-item {
+  padding: 40px 0;
+  opacity: 0.3;
+  filter: blur(2px);
+  transition: 0.5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+  transform: translateY(-80px);
+}
+.timeline-item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  font-family: "Pathway Gothic One", sans-serif;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  opacity: 0;
+  right: calc(-100% - 56px);
+}
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+}
+.timeline-item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px);
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  padding-right: 15px;
+}
+.timeline-item--active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+.timeline-item--active:before {
+  top: 50%;
+  transition: 0.3s all 0.2s;
+  opacity: 1;
+}
+.timeline-item--active .timeline__content-title {
+  margin: -50px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .timeline-item {
+    align-self: baseline !important;
+    width: 100%;
+    padding: 0 30px 150px 80px;
+  }
+  .timeline-item:before {
+    left: 10px !important;
+    padding: 0 !important;
+    top: 50px;
+    text-align: center !important;
+    width: 60px;
+    border: none !important;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 40px;
+  }
+}
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  transition: 0.3s ease 0s;
+  background-attachment: fixed;
+  background-size: cover;
+  cursor: pointer;
+}
+.timeline-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 15, 15, 0.674);
+  content: "";
+}
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.timeline-header__title {
+  color: #fff;
+  font-size: 46px;
+  font-family: Cardo;
+  font-weight: normal;
+  margin: 0;
+}
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
+
+#timeline-heading {
+  scroll-margin-top: 130px;
+}
+
+/* Styling About page */
+
+.about-title{
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 4%;
+  width: 58%;
+  text-align: left;
+  overflow: visible;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-title h1 {
+  margin: 0;
+  color: white;
+  font-family: "Rubik Dirt", sans-serif;
+  font-size: clamp(35px, 9vw, 75px);
+  font-weight: 500;
+  line-height: 0.9;
+  margin-bottom: 20px;
+}
+
+.about-text {
+    margin: 0 0 24px;
+  color: white;
+  font-size: clamp(10px, 2.1vw, 17px);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 1100px) {
+    /* .header-illustrations {
+        right: 10%;
+        bottom: 12%;
+        width: 80%;
+        height: 58%;
+    } */
+    /* .header-button {
+        width: min(320px, 80%);
+        min-width: 0;
+        padding: 20px 25px;
+        font-size: 18px;
+    } */
+}
+
+@media screen and (max-width: 600px) {
+    /* .header-illustrations {
+        right: 2%;
+        bottom: 15%;
+        width: 96%;
+        height: 50%;
+        gap: 2px;
+    }
+
+    .student-main {
+        height: 85%;
+    }
+
+    .student-left,
+    .student-right {
+        height: 57%;
+    } */
+}
+
+/* Larger PC screens */
+@media screen and (min-width: 1400px) {
+    .about-title h1 {
+        font-size: 100px;
+    }
+
+    .about-text {
+        font-size: 25px;
+    }
+    /* .header-illustrations {
+    bottom: 10%;
+} */
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    .about-title {
+        top: 16%;
+        left: 0;
+        width: 100%;
+        padding: 0 25px;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Styling about page end here */
+
+#SocialIconsAbout {
+display: flex;
+justify-content: center;  
+gap: 30px;                  
+margin-top: 30px;           
+position: relative;
+}
+
+#SocialIconsAbout .icons {
+width: 60px;
+height: 60px;
+background: transparent;
+border-radius: 50%;
+cursor: pointer;
+position: relative;
+border: 2px solid #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: border-color 0.3s ease;
+}
+
+#SocialIconsAbout .icons:hover {
+border-color: transparent;
+}
+
+#SocialIconsAbout .iconName {
+position: absolute;
+  top: -35px;
+  left: 50%;
+transform: translateX(-50%) scale(0);
+font-size: 12px;
+color: #fff;
+border-radius: 5px;
+padding: 4px 10px;
+text-align: center;
+transition: transform 0.3s ease;
+white-space: nowrap;
+z-index: 10;
+
+}
+
+#SocialIconsAbout .icons:hover .iconName {
+transform: translateX(-50%) scale(1);
+}
+
+#SocialIconsAbout .icons.instaIcon:hover .iconName {
+background: linear-gradient(30deg, #0000ff, #f56040);
+}
+
+#SocialIconsAbout .icons.xIcon:hover .iconName {
+background: #000;
+}
+
+#SocialIconsAbout .icons.emailIcon:hover .iconName {
+background: #ff5e00;
+}
+
+#SocialIconsAbout .icon {
+width: 100%;
+height: 100%;
+border-radius: 50%;
+position: relative;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#SocialIconsAbout .icon i {
+z-index: 2;
+color: #ffffff;
+font-size: 26px;
+transition: color 0.3s ease;
+}
+
+#SocialIconsAbout .icon:hover i {
+color: #fff;
+}
+
+#SocialIconsAbout .icon::before {
+content: "";
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 0;
+border-radius: 50%;
+transition: height 0.3s ease;
+z-index: 1;
+}
+
+#SocialIconsAbout .icon:hover::before {
+height: 100%;
+}
+
+#SocialIconsAbout .icon.insta::before {
+background: linear-gradient(40deg, #0000ff, #f56040);
+}
+
+#SocialIconsAbout .icon.x::before {
+background: #000;
+}
+
+#SocialIconsAbout .icon.email::before {
+background: #ff5e00;
+}
+
+#SocialIconsAbout a {
+ text-decoration: none;
+display: flex;
+align-items: center;
+width: 100%;
+height: 100%;
+justify-content: center;
+ position: absolute;
+color: inherit;
+z-index: 2;  
+}
+
+
+/* Dark background */
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Show the lightbox */
+#lightbox.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Enlarged image */
+#lightbox img {
+    max-width: 90%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+/* Caption underneath */
+.lightbox-caption {
+    margin: 12px 20px 0;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+.header-illustrations-comparecontrast {
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+
+    width: 65%;
+    height: 75%;
+   z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+:root {
+    /* Width of the side being hovered over */
+    --compare-hover-width: 70%;
+
+    /* Width of the other side */
+    --compare-other-width: 30%;
+
+    /* Speed of the expanding animation */
+    --compare-speed: 900ms;
+}
+
+
+/* Holds both sides */
+.compare-split-container {
+    position: relative;
+    width: 100%;
+    height: 820px;
+    overflow: hidden;
+    background: transparent;
+}
+
+
+/* Shared style for both sides */
+.compare-split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: width var(--compare-speed) ease-in-out;
+}
+
+
+/* Myanmar side */
+.compare-left {
+    left: 0;
+    background-image:
+        linear-gradient(rgba(71, 47, 35, 0.45), rgba(20, 15, 12, 0.85)),
+        url("optimized-transparent-illustrations/burmastudent.png");
+}
+
+
+/* New Zealand side */
+.compare-right {
+    right: 0;
+    background-image:
+        linear-gradient(rgba(73, 82, 70, 0.35), rgba(20, 25, 20, 0.85)),
+        url("optimized-transparent-illustrations/nzstudent.png");
+}
+
+
+/* Text inside each side */
+.compare-split-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: min(78%, 540px);
+
+    color: white;
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+}
+
+
+.compare-small-heading {
+    margin: 0 0 10px;
+    font-family: Rubik, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+.compare-split-content h1 {
+    margin-bottom: 22px;
+    color: white;
+    font-weight: normal;
+    font-family: "Rubik Dirt", sans-serif;
+    font-size: clamp(36px, 4vw, 60px);
+    line-height: 1;
+}
+
+
+.compare-split-content p {
+    font-family: Rubik, sans-serif;
+    font-size: clamp(16px, 1.3vw, 20px);
+    line-height: 1.5;
+}
+
+
+
+/* Expand Myanmar side */
+.compare-hover-left .compare-left {
+    width: var(--compare-hover-width);
+}
+
+.compare-hover-left .compare-right {
+    width: var(--compare-other-width);
+}
+
+
+/* Expand New Zealand side */
+.compare-hover-right .compare-right {
+    width: var(--compare-hover-width);
+}
+
+.compare-hover-right .compare-left {
+    width: var(--compare-other-width);
+}
+
+/* One comparison topic inside each side */
+.compare-split-content article {
+    margin: 0;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* no line for the final topic */
+.compare-split-content article:last-child {
+    border-bottom: none;
+}
+
+/* Smaller topic headings */
+.compare-split-content article h2 {
+    margin: 0 0 8px;
+    font-family: "Rubik Dirt", sans-serif;
+    font-size: clamp(21px, 2vw, 30px);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+/* Smaller, easier-to-read descriptions */
+.compare-split-content article p {
+    max-width: 500px;
+    margin: 0;
+    font-family: Rubik, sans-serif;
+    font-size: clamp(14px, 1.1vw, 17px);
+    line-height: 1.5;
+}
+
+#comparecontrast-heading {
+  scroll-margin-top: 130px;
+}
+/*PHONE AND TABLET LAYOUT*/
+
+@media screen and (max-width: 800px) {
+
+    /* Stack the two sides instead of expanding */
+    .compare-split-container {
+        height: auto;
+        background-color: white;
+    }
+
+    .compare-split {
+        position: relative;
+        width: 100%;
+        height: 520px;
+    }
+
+    .compare-left {
+        left: auto;
+    }
+
+    .compare-right {
+        right: auto;
+    }
+
+    /* Stop hover widths affecting touchscreens */
+    .compare-hover-left .compare-left,
+    .compare-hover-left .compare-right,
+    .compare-hover-right .compare-left,
+    .compare-hover-right .compare-right {
+        width: 100%;
+    }
+
+.compare-split-content {
+    top: 50%;
+    bottom: auto;
+    width: 85%;
+}
+
+}
+
+
+/* Smaller phones */
+@media screen and (max-width: 500px) {
+
+.compare-split {
+    position: relative;
+    width: 100%;
+    height: 620px;
+}
+
+    .compare-split-content h1 {
+        font-size: 40px;
+    }
+
+    .compare-split-content p {
+        font-size: 16px;
+    }
+}
+
+/* About page */
+.contact-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-items: start;
+  gap: 20px;
+}
+
+.contact-right img {
+
+  width: 350px;
+}
+
+.contact-left-title h2 {
+  font-weight: normal;
+  color: var(--text-color);
+  font-size: 40px;
+  margin-bottom: 5px;
+  font-family: "Rubik Dirt", sans-serif;
+}
+
+.contact-left-title hr {
+  border: none;
+  width: 270px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-inputs {
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+
+.contact-left textarea {
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+.contact-inputs {
+  border: 2px solid var(--accent-color);
+}
+
+.contact-inputs::placeholder {
+  color: #a9a9a9;
+}
+
+.contact-left button{
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: var(--button-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-left button:hover {
+  transform: translateY(-4px);
+}
+
+.contact-left button img {
+  height: 15px;
+}
+
+@media (max-width:800px) {
+  .contact-inputs {
+    width: 80vw;
+  }
+  
+  .contact-right {
+    display: none;
+  }
+}
+
+/* Donation */
+.donate-button {
+    display: inline-block;
+    padding: 16px 28px;
+    background: var(--button-color);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.donate-button:hover {
+    background: var(--button-color);
+    transform: translateY(-3px);
+}
+
+.donation-message {
+    max-width: 700px;
+    margin: 55px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.donation-message h2 {
+    margin-bottom: 12px;
+    color: var(--text-color);
+    font-family: "Rubik Dirt", sans-serif;
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight: normal;
+}
+
+.donation-message p {
+    color: var(--text-color);
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.6;
+    margin-bottom: 19px;
+}
